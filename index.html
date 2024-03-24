@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animation Maker</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+        canvas {
+            display: block;
+        }
+        .buttonContainer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+        }
+        .button:hover {
+            background-color: #a04545;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttonContainer">
+        <button class="button" onclick="loadTexture(0)">Vorderseite</button><br>
+        <button class="button" onclick="loadTexture(1)">Rückseite</button><br>
+        <button class="button" onclick="loadTexture(2)">Oben</button><br>
+        <button class="button" onclick="loadTexture(3)">Unten</button><br>
+        <button class="button" onclick="loadTexture(4)">Seite</button><br>
+        <button class="button" onclick="loadTexture(5)">Seite 2</button><br>
+        <button class="button" onclick="toggleRotation('x')">Drehung X</button><br>
+        <button class="button" onclick="toggleRotation('y')">Drehung Y</button><br>
+        <button class="button" onclick="toggleRotation('z')">Drehung Z</button><br>
+        <button class="button" onclick="toggleRotation('all')">Drehung Alle</button><br>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
